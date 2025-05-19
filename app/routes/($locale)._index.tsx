@@ -7,6 +7,9 @@ import type {
   RecommendedProductsQuery,
 } from 'storefrontapi.generated';
 import {ProductItem} from '~/components/ProductItem';
+// import {ScrollingLogo} from '~/components/test/ScrollingLogo';
+import {Example} from '~/components/test/Example';
+import {AnimatedTestimonialsDemo} from '~/components/test/AnimatedTestimonialsDemo';
 
 export const meta: MetaFunction = () => {
   return [{title: 'Hydrogen | Home'}];
@@ -60,8 +63,11 @@ export default function Homepage() {
   const data = useLoaderData<typeof loader>();
   return (
     <div className="home">
+      <Example/>
       <FeaturedCollection collection={data.featuredCollection} />
       <RecommendedProducts products={data.recommendedProducts} />
+      <AnimatedTestimonialsDemo/>
+      
     </div>
   );
 }

@@ -6,7 +6,8 @@ import type {
   HeaderQuery,
 } from 'storefrontapi.generated';
 import {Aside} from '~/components/Aside';
-import {Footer} from '~/components/Footer';
+// import {Footer} from '~/components/Footer';
+import {Footer2} from '~/components/layout/Footer';
 import {Header, HeaderMenu} from '~/components/Header';
 import {CartMain} from '~/components/CartMain';
 import {
@@ -46,11 +47,12 @@ export function PageLayout({
         />
       )}
       <main>{children}</main>
-      <Footer
+      {/* <Footer
         footer={footer}
         header={header}
         publicStoreDomain={publicStoreDomain}
-      />
+      /> */}
+    <Footer2/>
     </Aside.Provider>
   );
 }
